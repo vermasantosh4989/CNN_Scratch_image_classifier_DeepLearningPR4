@@ -13,40 +13,6 @@
   <img alt="Status" src="https://img.shields.io/badge/Status-Educational%20Project-informational">
 </p>
 
----
-
-## Table of Contents
-
-- [1. Project Overview](#1-project-overview)
-- [2. Project Objectives](#2-project-objectives)
-- [3. Problem Statement](#3-problem-statement)
-- [4. Dataset Description](#4-dataset-description)
-- [5. CIFAR-10 Classes](#5-cifar-10-classes)
-- [6. Project Structure](#6-project-structure)
-- [7. Technology Stack](#7-technology-stack)
-- [8. Environment Setup](#8-environment-setup)
-- [9. Installation](#9-installation)
-- [10. How to Run the Notebook](#10-how-to-run-the-notebook)
-- [11. Workflow](#11-workflow)
-- [12. Task A1 — Data Loading and Exploration](#12-task-a1--data-loading-and-exploration)
-- [13. Task A2 — Convolution Demonstration](#13-task-a2--convolution-demonstration)
-- [14. Task A3 — Pooling and CNN Architectures](#14-task-a3--pooling-and-cnn-architectures)
-- [15. Task A4 — CNN Training and Evaluation](#15-task-a4--cnn-training-and-evaluation)
-- [16. Task A5 — Data Augmentation](#16-task-a5--data-augmentation)
-- [17. Task A6 — Transfer Learning](#17-task-a6--transfer-learning)
-- [18. Task A6.5 — Model Comparison](#18-task-a65--model-comparison)
-- [19. Task A6.6 — Residual Connection](#19-task-a66--residual-connection)
-- [21. Evaluation Metrics](#21-evaluation-metrics)
-- [22. Results Table](#22-results-table)
-- [23. Expected Observations](#23-expected-observations)
-- [24. Reproducibility](#24-reproducibility)
-- [25. Troubleshooting](#25-troubleshooting)
-- [26. Performance and Runtime Notes](#26-performance-and-runtime-notes)
-- [27. Limitations](#27-limitations)
-- [28. Future Improvements](#28-future-improvements)
-- [29. Learning Outcomes](#29-learning-outcomes)
-- [30. References](#30-references)
-- [31. Final Submission Checklist](#31-final-submission-checklist)
 
 ---
 
@@ -62,7 +28,7 @@ Transfer learning is explored using a pretrained MobileNetV2 network.
 Finally, a residual connection is built with the Keras Functional API.
 
 The project is implemented in Python using TensorFlow and Keras.
-The main deliverable is a Jupyter Notebook named `DL_PR4A.ipynb`.
+The main deliverable is a Jupyter Notebook named `CIFAR_image_Classifier.ipynb`.
 
 The notebook is designed for educational use.
 It demonstrates how different model designs and training strategies affect image classification.
@@ -71,7 +37,7 @@ No test accuracy is assumed or hard-coded in this README.
 
 ### Main deliverables
 
-- `DL_PR4A.ipynb` — complete implementation and experiments.
+- `CIFAR_image_Classifier.ipynb` — complete implementation and experiments.
 - `README.md` — project documentation.
 - `requirements.txt` — Python package requirements.
 - Notebook outputs — charts, model summaries, and evaluation results after execution.
@@ -218,7 +184,7 @@ Keep the main files together in one project folder.
 
 ```text
 CIFAR10-CNN-Project/
-├── DL_PR4A.ipynb
+├── CIFAR_image_Classifier.ipynb
 ├── README.md
 ├── requirements.txt
 └── output/
@@ -245,8 +211,6 @@ The `output/` folder contains the screenshots embedded individually in the match
 
 ### Python
 
-Python is the programming language used for data preparation, modeling, evaluation, and visualization.
-
 ### TensorFlow and Keras
 
 TensorFlow provides the deep-learning runtime.
@@ -254,15 +218,9 @@ Keras provides APIs for defining, training, and evaluating neural networks.
 
 ### NumPy
 
-NumPy handles arrays, numeric transformations, and index selection.
-
 ### pandas
 
-pandas is used to create the final model-comparison DataFrame.
-
 ### Matplotlib
-
-Matplotlib creates image grids, histograms, learning curves, and comparison plots.
 
 ### scikit-learn
 
@@ -274,99 +232,9 @@ Jupyter allows code, charts, model summaries, and Markdown explanations to be ke
 
 ---
 
-## 8. Environment Setup
+## 8. How to Run the Notebook
 
-Use a Python environment supported by the TensorFlow version installed on your computer.
-
-Before installing packages, check the Python version:
-
-```bash
-python --version
-```
-
-Check pip:
-
-```bash
-python -m pip --version
-```
-
-If you have several Python installations, ensure that VS Code or Jupyter uses the same environment where the required packages are installed.
-
-### Recommended approach
-
-Create a virtual environment inside the project folder.
-
-On Windows:
-
-```bash
-py -3.12 -m venv .venv
-```
-
-Activate it in Command Prompt:
-
-```bat
-.venv\Scripts\activate
-```
-
-Activate it in PowerShell:
-
-```powershell
-.\.venv\Scripts\Activate.ps1
-```
-
-If activation is blocked by a computer policy, use the environment's Python executable directly or follow the policy set by your device administrator.
-Do not disable Windows security controls to install a package.
-
----
-
-## 9. Installation
-
-### Step 1 — Open the project folder
-
-Open the folder containing `DL_PR4A.ipynb` in VS Code or navigate to it in a terminal.
-
-### Step 2 — Activate the virtual environment
-
-Use the activation command for your terminal, as shown above.
-
-### Step 3 — Install requirements
-
-Run:
-
-```bash
-python -m pip install -r requirements.txt
-```
-
-### Step 4 — Check imports
-
-Run this in a notebook cell:
-
-```python
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import tensorflow as tf
-from tensorflow import keras
-import sklearn
-
-print("NumPy:", np.__version__)
-print("pandas:", pd.__version__)
-print("TensorFlow:", tf.__version__)
-print("scikit-learn:", sklearn.__version__)
-```
-
-If the imports work, the basic environment is ready.
-
-### Step 5 — Select the notebook kernel
-
-In VS Code, open the notebook and select the Python kernel that corresponds to your project environment.
-A notebook can fail to import a package if its kernel uses a different environment from the terminal.
-
----
-
-## 10. How to Run the Notebook
-
-1. Open `DL_PR4A.ipynb`.
+1. Open `CIFAR_image_Classifier.ipynb`.
 2. Select the correct Python kernel.
 3. Run the cells from the top to the bottom.
 4. Allow CIFAR-10 to download if it is not already cached.
@@ -377,19 +245,13 @@ A notebook can fail to import a package if its kernel uses a different environme
 9. Read the final observations and write conclusions based on actual results.
 10. Save the notebook after execution.
 
-### Important execution note
-
-The notebook trains multiple models.
-Training every model can take a long time, particularly on a CPU.
-For a quick code test, temporarily reduce the epoch limits.
-For the final submission, use the training settings required by your assignment and clearly document any changes.
 
 Run cells in order.
 Skipping a training cell can leave variables such as `test_accuracy_lenet` or `test_accuracy_ft` undefined.
 
 ---
 
-## 11. Workflow
+## 9. Workflow
 
 The high-level workflow is:
 
@@ -414,7 +276,7 @@ The high-level workflow is:
 
 ---
 
-## 12. Task A1 — Data Loading and Exploration
+## 10. Task A1 — Data Loading and Exploration
 
 ### Purpose
 
@@ -479,7 +341,7 @@ These factors make CIFAR-10 a useful classification benchmark.
 
 ---
 
-## 13. Task A2 — Convolution Demonstration
+## 11. Task A2 — Convolution Demonstration
 
 ### Purpose
 
@@ -536,7 +398,7 @@ Feature maps from a trained model are generally more informative than maps from 
 
 ---
 
-## 14. Task A3 — Pooling and CNN Architectures
+## 12. Task A3 — Pooling and CNN Architectures
 
 ### Purpose
 
@@ -599,7 +461,7 @@ The result also depends on training duration, optimization, regularization, and 
 
 ---
 
-## 15. Task A4 — CNN Training and Evaluation
+## 13. Task A4 — CNN Training and Evaluation
 
 ### Purpose
 
@@ -672,7 +534,7 @@ Use the held-out test set for final reporting, not repeated tuning.
 
 ---
 
-## 16. Task A5 — Data Augmentation
+## 14. Task A5 — Data Augmentation
 
 ### Purpose
 
@@ -733,7 +595,7 @@ Improvement is not guaranteed for every run, so use the measured results.
 
 ---
 
-## 17. Task A6 — Transfer Learning
+## 15. Task A6 — Transfer Learning
 
 ### Purpose
 
@@ -802,7 +664,7 @@ Use the final measured test accuracies to compare the approaches.
 
 ---
 
-## 18. Task A6.5 — Model Comparison
+## 16. Task A6.5 — Model Comparison
 
 ### Purpose
 
@@ -849,7 +711,7 @@ Do not replace measured results with sample or guessed values.
 
 ---
 
-## 19. Task A6.6 — Residual Connection
+## 17. Task A6.6 — Residual Connection
 
 ### Purpose
 
@@ -902,80 +764,20 @@ Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (C
 
 ---
 
-## 21. Evaluation Metrics
-
-### Accuracy
-
-Accuracy is the proportion of all predictions that are correct.
-
-\[
-\text{Accuracy} =
-\frac{\text{Correct Predictions}}{\text{Total Predictions}}
-\]
-
-Accuracy provides a simple overall measure, but it does not show which classes are most frequently confused.
-
-### Precision
-
-Precision measures how many predictions for a class were correct.
-
-\[
-\text{Precision} =
-\frac{TP}{TP + FP}
-\]
-
-Here, `TP` means true positives and `FP` means false positives for the class being considered.
-
-### Recall
-
-Recall measures how many actual examples of a class were identified correctly.
-
-\[
-\text{Recall} =
-\frac{TP}{TP + FN}
-\]
-
-Here, `FN` means false negatives.
-
-### F1-score
-
-The F1-score combines precision and recall using their harmonic mean.
-
-\[
-F1 = 2 \times
-\frac{\text{Precision} \times \text{Recall}}
-{\text{Precision} + \text{Recall}}
-\]
-
-The classification report provides precision, recall, F1-score, and support for each class.
-
-### Loss
-
-Categorical cross-entropy measures the difference between the true one-hot labels and predicted class probabilities.
-Lower loss is generally better when comparing the same task and loss definition.
-
-### Parameter count
-
-Parameter count reports the number of model weights and biases.
-A higher parameter count does not automatically imply better accuracy.
-Training time and memory usage also depend on layer operations, input resolution, batch size, and hardware.
-
----
-
-## 22. Results Table
+## 18. Results Table
 
 After all model training and evaluation cells have completed, use the table generated by Task A6.5.
 
 Record the results here if your submission requires a written summary.
 
-| Model | Test accuracy | Parameters |
+| Model | Test accuracy | 
 |---|---:|---:|
-| LeNet-5 | Fill from notebook | Fill from notebook |
-| CNN Scratch No Aug | Fill from notebook | Fill from notebook |
-| CNN Scratch + Aug | Fill from notebook | Fill from notebook |
-| CNN + Keras Aug Layers | Fill from notebook | Fill from notebook |
-| MobileNetV2 Feature Extraction | Fill from notebook | Fill from notebook |
-| MobileNetV2 Fine-Tuned | Fill from notebook | Fill from notebook |
+| LeNet-5 | Fill from notebook |
+| CNN Scratch No Aug | 80.50 | 
+| CNN Scratch + Aug | 84.88 | 
+| CNN + Keras Aug Layers | 84.89 | 
+| MobileNetV2 Feature Extraction | 85.27 |
+| MobileNetV2 Fine-Tuned | 86.51 | 
 
 These cells are intentionally not populated with invented values.
 Copy the actual output values from your run.
@@ -996,157 +798,8 @@ Replace every bracketed section with the actual findings.
 
 ---
 
-## 23. Expected Observations
 
-The following are questions to guide analysis, not guaranteed outcomes.
-
-### Data exploration
-
-- Are all ten classes represented?
-- Are the training class counts balanced?
-- Which classes appear visually similar?
-- How do normalization and one-hot encoding change the data representation?
-
-### Convolution
-
-- How does padding affect output dimensions?
-- What happens when the stride increases?
-- How do feature maps differ from one another?
-
-### Architectures
-
-- How does LeNet-5 compare with the custom CNN?
-- Does the custom CNN remain below the parameter limit?
-- Does training loss continue to decrease while validation loss increases?
-
-### Augmentation
-
-- Does augmentation improve validation accuracy?
-- Does it reduce overfitting?
-- How does it affect training duration?
-
-### Transfer learning
-
-- How does feature extraction compare with scratch training?
-- Does fine-tuning improve validation and test performance?
-- What is the cost of using larger 96 × 96 inputs?
-
-### Residual block
-
-- Do the shortcut and main path produce compatible tensor shapes?
-- Does the addition operation work?
-- What is the final output shape?
-
-Document observations based on actual output rather than expected theory alone.
-
----
-
-## 24. Reproducibility
-
-The notebook sets NumPy and TensorFlow random seeds.
-This improves repeatability but does not guarantee identical results across all systems.
-
-Results can vary because of:
-- TensorFlow version;
-- Keras version;
-- CPU or GPU hardware;
-- nondeterministic operations;
-- package builds;
-- random data augmentation;
-- training duration;
-- system memory constraints.
-
-For a reproducible report, record:
-- Python version;
-- TensorFlow version;
-- operating system;
-- whether CPU or GPU was used;
-- epoch limits;
-- batch sizes;
-- any changes to the notebook.
-
-The first MobileNetV2 run may download pretrained weights.
-Record any change in model architecture or training configuration.
-
----
-
-## 25. Troubleshooting
-
-### Error: `No module named tensorflow`
-
-Install requirements in the same environment used by the notebook:
-
-```bash
-python -m pip install -r requirements.txt
-```
-
-Then select that environment as the notebook kernel.
-
-### Error: `No module named sklearn`
-
-Install scikit-learn:
-
-```bash
-python -m pip install scikit-learn
-```
-
-The import name is `sklearn`, while the package name is `scikit-learn`.
-
-### TensorFlow does not import on Windows
-
-Check that your Python version is supported by the TensorFlow release you installed.
-Try a clean virtual environment and install a compatible TensorFlow version.
-If Windows reports that an application-control policy blocked a DLL, follow the device administrator's policy.
-Do not disable security features to work around the error.
-
-### GPU is not detected
-
-The notebook can run on a CPU, although training may take much longer.
-GPU support depends on the operating system, hardware, drivers, and TensorFlow distribution.
-Do not assume that installing TensorFlow automatically enables GPU acceleration.
-
-### Training is too slow
-
-- Use a smaller epoch count temporarily to verify that the notebook works.
-- Close other memory-intensive applications.
-- Use a smaller batch size if memory is limited.
-- Run the model experiments separately if necessary.
-- For final grading, restore the assignment's required settings.
-
-### Out-of-memory error
-
-Reduce the batch size.
-Avoid storing all resized images in memory when possible.
-The transfer-learning section uses a `tf.data` pipeline to resize batches on demand.
-
-### Variable is not defined
-
-Run all preceding notebook cells in order.
-For example, the comparison table requires each model's test accuracy and parameter count to have been computed.
-
-### Sequential model or InputLayer error
-
-Re-run the cell that defines the augmentation pipeline.
-The Keras augmentation model in this notebook uses the Functional API to connect augmentation layers to the model input.
-
-### MobileNetV2 weights fail to download
-
-Check your internet connection and retry.
-If the environment cannot access the internet, pretrained weights must be made available through an approved local setup before this part can run.
-
-### A plot is blank
-
-Confirm that the training history variable exists and contains the expected keys.
-If training did not finish, the history may contain fewer epochs than expected.
-
-### Accuracy differs from another student's result
-
-This can happen because of different random seeds, package versions, hardware, training duration, or model settings.
-Compare the exact experiment configuration before drawing conclusions.
-
----
-
-## 26. Performance and Runtime Notes
+## 19. Performance and Runtime Notes
 
 Training time depends on hardware and the number of epochs completed.
 A CPU-only system can take substantially longer than a supported GPU environment.
@@ -1168,7 +821,7 @@ For a fair comparison:
 
 ---
 
-## 27. Limitations
+## 20. Limitations
 
 1. CIFAR-10 images are only 32 × 32 pixels, so fine details are limited.
 2. Some classes have overlapping visual characteristics.
@@ -1185,31 +838,8 @@ For a fair comparison:
 
 ---
 
-## 28. Future Improvements
 
-Possible extensions include:
-
-- train for more epochs when compute resources permit;
-- test additional optimizers;
-- tune learning rates and batch sizes;
-- compare dropout and weight decay;
-- evaluate additional CNN architectures;
-- add class-wise accuracy charts;
-- save model checkpoints;
-- use repeated runs to estimate variation;
-- export the results table to CSV;
-- save the best trained model;
-- create a separate inference notebook;
-- investigate quantization for smaller deployments;
-- compare additional pretrained architectures;
-- use a more systematic hyperparameter search;
-- add automated experiment tracking.
-
-Any extension should preserve the separation between training, validation, and test data.
-
----
-
-## 29. Learning Outcomes
+## 21. Learning Outcomes
 
 By completing this project, a learner should be able to:
 
@@ -1231,78 +861,19 @@ By completing this project, a learner should be able to:
 - report results honestly and reproducibly.
 
 ---
+## Conclusion
 
-## 30. References
+## Conclusion
 
-1. **CIFAR-10 dataset** — University of Toronto, Learning Multiple Layers of Features from Tiny Images.  
-   https://www.cs.toronto.edu/~kriz/cifar.html
-
-2. **TensorFlow documentation** — Machine learning framework.  
-   https://www.tensorflow.org/
-
-3. **Keras documentation** — Deep-learning API.  
-   https://keras.io/
-
-4. **MobileNetV2** — Sandler, M. et al. (2018). *MobileNetV2: Inverted Residuals and Linear Bottlenecks*. CVPR.  
-   https://arxiv.org/abs/1801.04381
-
-5. **ResNet** — He, K. et al. (2016). *Deep Residual Learning for Image Recognition*. CVPR.  
-   https://arxiv.org/abs/1512.03385
-
-6. **scikit-learn documentation** — Classification metrics and evaluation tools.  
-   https://scikit-learn.org/stable/
-
-7. **NumPy documentation** — Numerical computing in Python.  
-   https://numpy.org/doc/
-
-8. **pandas documentation** — Data analysis and DataFrame styling.  
-   https://pandas.pydata.org/docs/
-
-9. **Matplotlib documentation** — Visualization in Python.  
-   https://matplotlib.org/stable/
-
-10. **Jupyter documentation** — Interactive notebooks.  
-    https://docs.jupyter.org/
+This project demonstrates CIFAR-10 image classification using CNNs, data augmentation, and MobileNetV2 transfer learning. It compares model performance and helps understand how convolution, pooling, and fine-tuning improve image classification. The project provides practical experience in deep learning and computer vision.
 
 ---
 
-## 31. Final Submission Checklist
+# Author
 
-### Files
+**Name:** Santosh Verma
 
-- [ ] `DL_PR4A.ipynb` is present.
-- [ ] `README.md` is present.
-- [ ] `requirements.txt` is present.
-- [ ] Any required screenshots or exports are saved separately.
+**Project:** CIFAR-10_Image_Classifier
 
-### Notebook execution
+**Course:** Data Science / AI/ML
 
-- [ ] The correct Python kernel is selected.
-- [ ] All imports work.
-- [ ] CIFAR-10 loads correctly.
-- [ ] The A1 visualizations appear.
-- [ ] The convolution and pooling demonstrations run.
-- [ ] LeNet-5 training and evaluation finish.
-- [ ] The custom CNN parameter count is below two million.
-- [ ] CNN evaluation plots and the confusion matrix appear.
-- [ ] The ImageDataGenerator model runs.
-- [ ] The Keras augmentation model runs.
-- [ ] MobileNetV2 feature extraction completes.
-- [ ] MobileNetV2 fine-tuning completes.
-- [ ] The six-row model-comparison table appears.
-- [ ] The maximum test accuracy is highlighted.
-- [ ] The residual model summary and output shape appear.
-
-### Report quality
-
-- [ ] The accuracy discussion uses measured values.
-- [ ] The model comparison includes parameter counts.
-- [ ] Training and validation behavior is discussed.
-- [ ] Limitations are acknowledged.
-- [ ] Any deviations from assignment settings are documented.
-- [ ] No guessed results are presented as measured results.
-
-### Final reminder
-
-Run the notebook from top to bottom before submission.
-Save the executed notebook so that the required plots, model summaries, and results table are visible.
