@@ -771,7 +771,7 @@ After all model training and evaluation cells have completed, use the table gene
 Record the results here if your submission requires a written summary.
 
 | Model | Test accuracy | 
-|---|---:|---:|
+|---|---:|
 | LeNet-5 | Fill from notebook |
 | CNN Scratch No Aug | 80.50 | 
 | CNN Scratch + Aug | 84.88 | 
@@ -799,29 +799,7 @@ Replace every bracketed section with the actual findings.
 ---
 
 
-## 19. Performance and Runtime Notes
-
-Training time depends on hardware and the number of epochs completed.
-A CPU-only system can take substantially longer than a supported GPU environment.
-
-LeNet-5 is relatively compact.
-The custom CNN uses more convolutional layers.
-Augmentation adds work to the data pipeline.
-MobileNetV2 uses a pretrained network and processes resized 96 × 96 images, which increases computation per image.
-
-Early stopping may reduce the number of epochs actually executed.
-Therefore, the maximum epoch setting is not necessarily the number of epochs completed.
-
-For a fair comparison:
-- keep data splits consistent;
-- use the same test set;
-- report the actual training configuration;
-- avoid changing settings for only one model without documenting the change;
-- compare measured results instead of relying on assumptions.
-
----
-
-## 20. Limitations
+## 19. Limitations
 
 1. CIFAR-10 images are only 32 × 32 pixels, so fine details are limited.
 2. Some classes have overlapping visual characteristics.
@@ -839,7 +817,7 @@ For a fair comparison:
 ---
 
 
-## 21. Learning Outcomes
+## 20. Learning Outcomes
 
 By completing this project, a learner should be able to:
 
