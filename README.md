@@ -692,22 +692,6 @@ The table includes:
 The notebook uses pandas Styler `highlight_max` to highlight the maximum value in the Test Accuracy column.
 The table is sorted by measured test accuracy for convenient review.
 
-### Interpreting the table
-
-Do not assume that accuracy must increase at every step.
-Compare the actual numbers produced by your run.
-
-A useful discussion should mention:
-- which model achieved the highest test accuracy;
-- how the scratch CNN compares with LeNet-5;
-- whether augmentation improved the result;
-- whether Keras augmentation and `ImageDataGenerator` differ;
-- whether MobileNetV2 feature extraction was effective;
-- whether fine-tuning improved the feature-extraction result;
-- the parameter-count and training-time trade-offs.
-
-The final written summary should match the notebook outputs.
-Do not replace measured results with sample or guessed values.
 
 ---
 
@@ -741,26 +725,6 @@ Input image
                                Output
 ```
 
-### Why use a shortcut?
-
-A shortcut provides a direct path through which information and gradients can travel.
-This can help mitigate optimization difficulties and vanishing gradients in deep networks.
-
-Residual connections do not guarantee that vanishing gradients are completely eliminated.
-They are a key design idea behind ResNet.
-
-### Functional API
-
-The Keras Functional API is suitable for models with multiple branches.
-Unlike a strictly linear stack of layers, it allows separate paths to be combined.
-
-The notebook prints the model summary and checks the output shape using a sample input.
-
-### Reference
-
-He, K., Zhang, X., Ren, S., and Sun, J.
-“Deep Residual Learning for Image Recognition.”
-Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2016.
 
 ---
 
@@ -772,7 +736,7 @@ Record the results here if your submission requires a written summary.
 
 | Model | Test accuracy | 
 |---|---:|
-| LeNet-5 | Fill from notebook |
+| LeNet-5 | ____ |
 | CNN Scratch No Aug | 80.50 | 
 | CNN Scratch + Aug | 84.88 | 
 | CNN + Keras Aug Layers | 84.89 | 
@@ -839,8 +803,6 @@ By completing this project, a learner should be able to:
 - report results honestly and reproducibly.
 
 ---
-## Conclusion
-
 ## Conclusion
 
 This project demonstrates CIFAR-10 image classification using CNNs, data augmentation, and MobileNetV2 transfer learning. It compares model performance and helps understand how convolution, pooling, and fine-tuning improve image classification. The project provides practical experience in deep learning and computer vision.
