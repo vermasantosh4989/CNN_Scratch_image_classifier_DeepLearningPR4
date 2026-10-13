@@ -210,16 +210,13 @@ The `output/` folder contains the screenshots embedded individually in the match
 ## 7. Technology Stack
 
 ### Python
-
 ### TensorFlow and Keras
 
 TensorFlow provides the deep-learning runtime.
 Keras provides APIs for defining, training, and evaluating neural networks.
 
 ### NumPy
-
 ### pandas
-
 ### Matplotlib
 
 ### scikit-learn
@@ -232,26 +229,8 @@ Jupyter allows code, charts, model summaries, and Markdown explanations to be ke
 
 ---
 
-## 8. How to Run the Notebook
 
-1. Open `CIFAR_image_Classifier.ipynb`.
-2. Select the correct Python kernel.
-3. Run the cells from the top to the bottom.
-4. Allow CIFAR-10 to download if it is not already cached.
-5. Inspect the plots and model summaries.
-6. Wait for each training cell to finish.
-7. Check that all model evaluation variables are defined.
-8. Review the A6.5 results table.
-9. Read the final observations and write conclusions based on actual results.
-10. Save the notebook after execution.
-
-
-Run cells in order.
-Skipping a training cell can leave variables such as `test_accuracy_lenet` or `test_accuracy_ft` undefined.
-
----
-
-## 9. Workflow
+## 8. Workflow
 
 The high-level workflow is:
 
@@ -276,7 +255,7 @@ The high-level workflow is:
 
 ---
 
-## 10. Task A1 — Data Loading and Exploration
+## 9. Task A1 — Data Loading and Exploration
 
 ### Purpose
 
