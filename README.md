@@ -25,15 +25,10 @@ It then introduces convolution, padding, strides, feature maps, and pooling.
 Several CNN architectures are trained and compared.
 Data augmentation is used to improve the diversity of training examples.
 Transfer learning is explored using a pretrained MobileNetV2 network.
-Finally, a residual connection is built with the Keras Functional API.
 
 The project is implemented in Python using TensorFlow and Keras.
 The main deliverable is a Jupyter Notebook named `CIFAR_image_Classifier.ipynb`.
 
-The notebook is designed for educational use.
-It demonstrates how different model designs and training strategies affect image classification.
-Actual accuracy values are generated when the notebook is executed.
-No test accuracy is assumed or hard-coded in this README.
 
 ### Main deliverables
 
@@ -94,9 +89,6 @@ The project compares multiple approaches to understand the trade-offs among:
 - use of pretrained features;
 - final test accuracy.
 
-The goal is not to claim that one model always wins.
-The goal is to run the experiments, record the measured results, and explain those results accurately.
-
 ---
 
 ## 4. Dataset Description
@@ -133,8 +125,6 @@ from tensorflow import keras
 )
 ```
 
-The first run may download the dataset automatically.
-An internet connection may be required for the initial download.
 
 ### Training, validation, and test data
 
@@ -207,30 +197,7 @@ The `output/` folder contains the screenshots embedded individually in the match
 
 ---
 
-## 7. Technology Stack
-
-### Python
-### TensorFlow and Keras
-
-TensorFlow provides the deep-learning runtime.
-Keras provides APIs for defining, training, and evaluating neural networks.
-
-### NumPy
-### pandas
-### Matplotlib
-
-### scikit-learn
-
-scikit-learn provides classification metrics and confusion-matrix utilities.
-
-### Jupyter Notebook
-
-Jupyter allows code, charts, model summaries, and Markdown explanations to be kept in one document.
-
----
-
-
-## 8. Workflow
+## 7. Workflow
 
 The high-level workflow is:
 
@@ -255,7 +222,7 @@ The high-level workflow is:
 
 ---
 
-## 9. Task A1 — Data Loading and Exploration
+## 8. Task A1 — Data Loading and Exploration
 
 ### Purpose
 
@@ -272,7 +239,7 @@ Understand the dataset before training a model.
 - Convert labels to one-hot encoded vectors.
 - Plot a comparison of original and normalized pixel values.
 
-**Screenshot — five samples from each CIFAR-10 class**
+** — five samples from each CIFAR-10 class**
 
 ![CIFAR-10: five samples per class](output/CIFAR-10_5_Samples.png)
 
