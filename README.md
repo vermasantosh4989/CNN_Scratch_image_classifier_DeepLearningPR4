@@ -685,9 +685,9 @@ Use this template after evaluating the models:
 - The highest measured test accuracy was achieved by **[model name]**.
 - Its test accuracy was **[measured percentage]**.
 - Compared with the scratch CNN, **[model name]** performed **[better / similarly / worse]**.
-- The augmentation experiment **[improved / did not improve]** test accuracy in this run.
-- MobileNetV2 feature extraction achieved **[measured result]**.
-- Fine-tuning **[improved / did not improve]** the feature-extraction result.
+- The augmentation experiment **[84.89 / 78.67]** test accuracy in this run.
+- MobileNetV2 feature extraction achieved **[85.27]**.
+- Fine-tuning **[86.51 / 85.27]** the feature-extraction result.
 - The results show a trade-off between accuracy, model complexity, and training cost.
 
 Replace every bracketed section with the actual findings.
