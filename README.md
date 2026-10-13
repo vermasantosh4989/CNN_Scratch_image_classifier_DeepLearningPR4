@@ -675,23 +675,6 @@ Record the results here if your submission requires a written summary.
 | MobileNetV2 Feature Extraction | 85.27 |
 | MobileNetV2 Fine-Tuned | 86.51 | 
 
-These cells are intentionally not populated with invented values.
-Copy the actual output values from your run.
-
-### Suggested results discussion
-
-Use this template after evaluating the models:
-
-- The highest measured test accuracy was achieved by **[model name]**.
-- Its test accuracy was **[measured percentage]**.
-- Compared with the scratch CNN, **[model name]** performed **[better / similarly / worse]**.
-- The augmentation experiment **[84.89 / 78.67]** test accuracy in this run.
-- MobileNetV2 feature extraction achieved **[85.27]**.
-- Fine-tuning **[86.51 / 85.27]** the feature-extraction result.
-- The results show a trade-off between accuracy, model complexity, and training cost.
-
-Replace every bracketed section with the actual findings.
-
 ---
 
 
@@ -711,28 +694,6 @@ Replace every bracketed section with the actual findings.
 12. The notebook is educational and is not optimized as a production deployment pipeline.
 
 ---
-
-
-## 18. Learning Outcomes
-
-By completing this project, a learner should be able to:
-
-- load an image dataset using Keras;
-- inspect image and label arrays;
-- normalize image pixel values;
-- encode categorical labels;
-- explain convolution, padding, and stride;
-- interpret convolution feature maps;
-- compare max and average pooling;
-- construct CNNs using Keras;
-- monitor training and validation curves;
-- use early stopping and learning-rate reduction;
-- evaluate a classifier with precision, recall, F1-score, and a confusion matrix;
-- apply image augmentation;
-- explain feature extraction and fine-tuning;
-- compare models using pandas;
-- construct a residual block with the Functional API;
-- report results honestly and reproducibly.
 
 ---
 ## Conclusion
