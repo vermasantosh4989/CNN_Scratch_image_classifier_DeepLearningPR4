@@ -239,7 +239,7 @@ Understand the dataset before training a model.
 - Convert labels to one-hot encoded vectors.
 - Plot a comparison of original and normalized pixel values.
 
-** — five samples from each CIFAR-10 class**
+**  five samples from each CIFAR-10 class**
 
 ![CIFAR-10: five samples per class](output/CIFAR-10_5_Samples.png)
 
@@ -255,11 +255,11 @@ X_test = X_test_raw.astype("float32") / 255.0
 
 Normalization helps keep input magnitudes consistent during training.
 
-**Screenshot — pixel distribution before normalization**
+**  pixel distribution before normalization**
 
 ![Histogram before normalisation](output/Histogram_Befor_Normalisation.png)
 
-**Screenshot — pixel distribution after normalization**
+** pixel distribution after normalization**
 
 ![Histogram after normalisation](output/Histogram_After_Normalisation.png)
 
@@ -273,7 +273,7 @@ y_train_ohe = keras.utils.to_categorical(y_train_raw, 10)
 y_test_ohe = keras.utils.to_categorical(y_test_raw, 10)
 ```
 
-### CNN versus ANN
+### CNN vs ANN
 
 A conventional fully connected neural network often flattens an image into a long vector.
 A CNN applies filters to local image regions and shares the same filter weights across positions.
@@ -287,7 +287,7 @@ These factors make CIFAR-10 a useful classification benchmark.
 
 ---
 
-## 11. Task A2 — Convolution Demonstration
+## 9. Task A2 — Convolution Demonstration
 
 ### Purpose
 
@@ -308,7 +308,7 @@ A convolution filter moves across an input image.
 At each location, it combines the filter values with the corresponding input values.
 The resulting number contributes to an output feature map.
 
-**Screenshot — original image compared with its convolved result**
+** original image compared with its convolved result**
 
 ![Original image versus convolved image](output/Original_image_vs_convolved_image.png)
 
@@ -332,7 +332,7 @@ A convolution layer can contain multiple filters.
 Each filter produces its own feature map.
 The notebook displays 16 feature maps from a convolution layer to demonstrate this concept.
 
-**Screenshot — 16 convolution feature maps**
+** 16 convolution feature maps**
 
 ![16 feature maps](output/16_Feature_map_image.png)
 
@@ -344,7 +344,7 @@ Feature maps from a trained model are generally more informative than maps from 
 
 ---
 
-## 12. Task A3 — Pooling and CNN Architectures
+## 10. Task A3 — Pooling and CNN Architectures
 
 ### Purpose
 
@@ -355,7 +355,7 @@ Study downsampling and compare CNN designs.
 Max pooling selects the largest value within each local window.
 It can preserve strong activations while reducing spatial resolution.
 
-**Screenshot — feature maps after max pooling**
+**S feature maps after max pooling**
 
 ![Feature maps after max pooling](output/Feature_map_Aftermaxpooling.png)
 
@@ -364,7 +364,7 @@ It can preserve strong activations while reducing spatial resolution.
 Average pooling calculates the mean of each local window.
 It produces a smoother summary of the values in that window.
 
-**Screenshot — feature maps after average pooling**
+** feature maps after average pooling**
 
 ![Feature maps after average pooling](output/Feture_map_after_averagepooling.png)
 
@@ -407,7 +407,7 @@ The result also depends on training duration, optimization, regularization, and 
 
 ---
 
-## 13. Task A4 — CNN Training and Evaluation
+## 11. Task A4 — CNN Training and Evaluation
 
 ### Purpose
 
@@ -449,7 +449,7 @@ The notebook generates:
 - a confusion matrix;
 - examples of misclassified images.
 
-**Screenshot — CNN training and validation curves**
+** CNN training and validation curves**
 
 ![CNN training curves](output/CNN_Traning_Curves.png)
 
@@ -459,7 +459,7 @@ A confusion matrix compares true class labels with predicted class labels.
 Diagonal entries represent correct predictions.
 Off-diagonal entries show which classes are being confused.
 
-**Screenshot — CIFAR-10 confusion matrix**
+** CIFAR-10 confusion matrix**
 
 ![CIFAR-10 confusion matrix](output/CIFAR-10_Confusion_matrix.png)
 
@@ -468,7 +468,7 @@ Off-diagonal entries show which classes are being confused.
 The notebook displays a selection of test images where the predicted class differs from the true class.
 Reviewing these examples can reveal confusing class pairs and difficult image conditions.
 
-**Screenshot — examples of misclassified images**
+** examples of misclassified images**
 
 ![Misclassified images](output/Misclassified_images.png)
 
@@ -480,7 +480,7 @@ Use the held-out test set for final reporting, not repeated tuning.
 
 ---
 
-## 14. Task A5 — Data Augmentation
+## 12. Task A5 — Data Augmentation
 
 ### Purpose
 
@@ -504,24 +504,14 @@ The notebook uses `ImageDataGenerator` with transformations such as:
 The generator creates augmented batches during training.
 A custom CNN is trained on these batches and evaluated on the original held-out test images.
 
-**Screenshot — image augmentation examples**
+** image augmentation examples**
 
 ![Image augmentation examples](output/Augmentation_image.png)
 
-**Screenshot — augmentation model training curves**
+** augmentation model training curves**
 
 ![Augmentation training curves](output/Augmentation_Traning_Curves.png)
 
-### A5.4 — Keras augmentation layers
-
-The notebook also uses Keras preprocessing layers:
-- `RandomFlip`;
-- `RandomRotation`;
-- `RandomZoom`;
-- `RandomTranslation`.
-
-These layers are included in a Functional API model.
-This approach keeps augmentation within the model pipeline.
 
 ### Why compare both methods?
 
@@ -541,7 +531,7 @@ Improvement is not guaranteed for every run, so use the measured results.
 
 ---
 
-## 15. Task A6 — Transfer Learning
+## 13. Task A6 — Transfer Learning
 
 ### Purpose
 
@@ -604,13 +594,13 @@ Transfer learning can be helpful when pretrained features are useful for the tar
 However, resizing small images and using a pretrained model do not guarantee a higher score than a well-trained custom CNN.
 Use the final measured test accuracies to compare the approaches.
 
-**Screenshot — MobileNetV2 feature extraction versus fine-tuning**
+** MobileNetV2 feature extraction versus fine-tuning**
 
 ![Feature extraction versus fine-tuning](output/Feature_Extraction_vs_Fine_tuning.png)
 
 ---
 
-## 16. Task A6.5 — Model Comparison
+## 14. Task A6.5 — Model Comparison
 
 ### Purpose
 
@@ -633,15 +623,11 @@ The table includes:
 5. MobileNetV2 Feature Extraction (Task A6.3).
 6. MobileNetV2 Fine-Tuned (Task A6.4).
 
-### Highlighting
-
-The notebook uses pandas Styler `highlight_max` to highlight the maximum value in the Test Accuracy column.
-The table is sorted by measured test accuracy for convenient review.
 
 
 ---
 
-## 17. Task A6.6 — Residual Connection
+## 15. Task A6.6 — Residual Connection
 
 ### Purpose
 
@@ -674,7 +660,7 @@ Input image
 
 ---
 
-## 18. Results Table
+## 16. Results Table
 
 After all model training and evaluation cells have completed, use the table generated by Task A6.5.
 
@@ -709,7 +695,7 @@ Replace every bracketed section with the actual findings.
 ---
 
 
-## 19. Limitations
+## 17. Limitations
 
 1. CIFAR-10 images are only 32 × 32 pixels, so fine details are limited.
 2. Some classes have overlapping visual characteristics.
@@ -727,7 +713,7 @@ Replace every bracketed section with the actual findings.
 ---
 
 
-## 20. Learning Outcomes
+## 18. Learning Outcomes
 
 By completing this project, a learner should be able to:
 
