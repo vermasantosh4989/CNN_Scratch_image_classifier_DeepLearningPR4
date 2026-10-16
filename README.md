@@ -15,16 +15,22 @@
 
 
 ---
+## Project Overview Video
+
+Watch the recorded project overview and demonstration: **[▶ Watch the CIFAR-10 CNN Project Video](https://drive.google.com/file/d/15ToA9eCh0yH2PLh3CbQWCfWAY989omKS/view?usp=sharing)**
+---
 
 ## 1. Project Overview
 
 This project builds and evaluates image-classification models using the CIFAR-10 dataset.
 
-The work starts with data exploration and image preprocessing.
-It then introduces convolution, padding, strides, feature maps, and pooling.
-Several CNN architectures are trained and compared.
-Data augmentation is used to improve the diversity of training examples.
-Transfer learning is explored using a pretrained MobileNetV2 network.
+The main objective of this project is to understand how Convolutional Neural Networks, also known as CNNs, can classify images into different categories.
+
+In this project, I have used Python, TensorFlow, Keras, NumPy, Matplotlib, and Scikit-learn.
+
+I have explored image preprocessing, convolution operations, pooling techniques, CNN architectures, model training, data augmentation, and transfer learning using MobileNetV2.
+
+I have also compared different models to understand how their architectures and training techniques affect image classification performance.
 
 The project is implemented in Python using TensorFlow and Keras.
 The main deliverable is a Jupyter Notebook named `CIFAR_image_Classifier.ipynb`.
